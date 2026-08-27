@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Historia del Arte II — Movimientos Artísticos</title>
+<style>
+:root{
+    --bg:#0f1117;
+    --card:#191d27;
+    --card2:#222735;
+    --text:#f5f2ea;
+    --muted:#b9b6ae;
+    --accent:#d8a84e;
+    --line:#343a49
+}
+
+*{
+    box-sizing:border-box
+}
+
+html{
+    scroll-behavior:smooth
+}
+
+body{
+    margin:0;
+    font-family:Georgia,"Times New Roman",serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.55
+}
+
+.hero{
+    min-height:70vh;
+    padding:70px 7%;
+    display:flex;
+    align-items:end;
+    background:
+        linear-gradient(180deg,rgba(10,10,15,.25),#0f1117),
+        url("https://commons.wikimedia.org/wiki/Special:FilePath/The_School_of_Athens.jpg")
+        center/cover fixed
+}
+
+.hero-box{
+    max-width:1000px;
+    background:rgba(15,17,23,.88);
+    padding:50px;
+    border-left:10px solid var(--accent);
+    backdrop-filter:blur(5px)
+}
+
+.kicker{
+    color:var(--accent);
+    font-family:Arial,sans-serif;
+    text-transform:uppercase;
+    letter-spacing:3px;
+    font-size:.8rem;
+    font-weight:700
+}
+
+h1{
+    font-size:clamp(2.5rem,6vw,5.5rem);
+    line-height:1;
+    margin:12px 0
+}
+
+.hero p{
+    font-size:1.15rem;
+    color:#ddd
+}
+
+nav{
+    position:sticky;
+    top:0;
+    z-index:10;
+    background:rgba(15,17,23,.96);
+    border-bottom:1px solid var(--line);
+    overflow:auto
+}
+
+nav .inner{
+    display:flex;
+    gap:8px;
+    padding:12px 5%;
+    min-width:max-content
+}
+
+nav a{
+    color:var(--text);
+    text-decoration:none;
+    padding:9px 13px;
+    border:1px solid var(--line);
+    border-radius:20px;
+    font-family:Arial,sans-serif;
+    font-size:.85rem
+}
+
+nav a:hover{
+    border-color:var(--accent);
+    color:var(--accent)
+}
+
+main{
+    max-width:1250px;
+    margin:auto;
+    padding:45px 5%
+}
+
+.movement{
+    margin:0 0 65px;
+    padding:32px;
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:22px;
+    box-shadow:0 12px 40px rgba(0,0,0,.18)
+}
+
+.heading{
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+    align-items:end;
+    border-bottom:1px solid var(--line);
+    padding-bottom:18px;
+    margin-bottom:24px
+}
+
+.heading h2{
+    font-size:2.2rem;
+    margin:0
+}
+
+.years{
+    color:var(--accent);
+    font-family:Arial,sans-serif;
+    font-weight:700
+}
+
+/* IMÁGENES MÁS GRANDES */
+.grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px
+}
+
+.feature{
+    min-height:550px;
+    background-size:cover;
+    background-position:center;
+    border-radius:16px;
+    overflow:hidden;
+    position:relative
+}
+
+.feature:after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        transparent 35%,
+        rgba(0,0,0,.9)
+    )
+}
+
+.feature span{
+    position:absolute;
+    z-index:1;
+    bottom:18px;
+    left:20px;
+    font-size:1.25rem;
+    font-weight:bold
+}
+
+.info h3{
+    margin-top:0;
+    color:var(--accent)
+}
+
+.info p{
+    color:#ddd
+}
+
+.artists{
+    display:flex;
+    flex-wrap:wrap;
+    gap:9px
+}
+
+.artist{
+    padding:8px 12px;
+    background:var(--card2);
+    border-radius:20px;
+    font-family:Arial,sans-serif;
+    font-size:.9rem
+}
+
+.works{
+    margin-top:25px
+}
+
+.works h3{
+    color:var(--accent)
+}
+
+.works ol{
+    columns:2;
+    padding-left:25px
+}
+
+.works li{
+    padding:5px 0;
+    color:#e4e1d9
+}
+
+footer{
+    text-align:center;
+    color:var(--muted);
+    padding:45px 20px;
+    border-top:1px solid var(--line);
+    font-family:Arial,sans-serif;
+    font-size:.85rem
+}
+
+/* ADAPTACIÓN PARA CELULARES */
+@media(max-width:800px){
+
+    .grid{
+        grid-template-columns:1fr
+    }
+
+    .works ol{
+        columns:1
+    }
+
+    .movement{
+        padding:22px
+    }
+
+    .hero{
+        min-height:55vh;
+        padding:35px 5%
+    }
+
+    /* En celular también son grandes, pero sin ocupar demasiado */
+    .feature{
+        min-height:500px
+    }
+}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="hero-box">
+    <div class="kicker">Historia del Arte II · V Bachillerato en Diseño Gráfico</div>
+    <h1>Movimientos Artísticos</h1>
+    <p>Recorrido visual desde el Duecento hasta el Rococó: contexto, características, artistas y diez obras representativas de cada movimiento.</p>
+  </div>
+</header>
+
+<nav><div class="inner">
+<a href="#duecento">Duecento</a><a href="#trecento">Trecento</a><a href="#quattrocento">Quattrocento</a><a href="#cinquecento">Cinquecento</a><a href="#renacimiento">Renacimiento</a><a href="#manierismo">Manierismo</a><a href="#barroco">Barroco</a><a href="#rococo">Rococó</a>
+</div></nav>
+
+<main>
+
+<section class="movement" id="duecento">
+<div class="heading"><h2>Duecento</h2><div class="years">Siglo XIII · c. 1200–1300</div></div>
+<div class="grid"><div class="feature" style="background-image:url('duecento.jpg')"><span>Transición del arte medieval hacia el naturalismo</span></div>
+<div class="info"><h3>Características</h3><p>Etapa italiana del siglo XIII marcada por la tradición bizantina y por un creciente interés en representar volumen, gestos y espacio de manera más natural.</p><h3>3 artistas</h3><div class="artists"><span class="artist">Cimabue</span><span class="artist">Duccio</span><span class="artist">Nicola Pisano</span></div></div></div>
+<div class="works"><h3>10 obras importantes</h3><ol><li>Maestà di Santa Trinita — Cimabue</li><li>Crucifix — Cimabue</li><li>Maestà — Duccio</li><li>Rucellai Madonna — Duccio</li><li>Creación de Adán — Coppo di Marcovaldo</li><li>Madonna del Bordone — Coppo di Marcovaldo</li><li>Púlpito del Baptisterio de Pisa — Nicola Pisano</li><li>Púlpito de la Catedral de Siena — Nicola Pisano</li><li>Madonna and Child — Guido da Siena</li><li>San Francisco — Bonaventura Berlinghieri</li></ol></div>
+</section>
+
+<section class="movement" id="trecento">
+<div class="heading"><h2>Trecento</h2><div class="years">Siglo XIV · c. 1300–1400</div></div>
+<div class="grid"><div class="feature" style="background-image:url('trecento.jpg')"><span>Naturalismo, emoción y profundidad espacial</span></div>
+<div class="info"><h3>Características</h3><p>El arte italiano avanza hacia figuras más humanas, expresivas y volumétricas. Los espacios adquieren mayor profundidad y las escenas narrativas ganan dramatismo.</p><h3>3 artistas</h3><div class="artists"><span class="artist">Giotto</span><span class="artist">Simone Martini</span><span class="artist">Ambrogio Lorenzetti</span></div></div></div>
+<div class="works"><h3>10 obras importantes</h3><ol><li>El beso de Judas — Giotto</li><li>Lamentación — Giotto</li><li>Expulsión de los mercaderes — Giotto</li><li>Madonna de Ognissanti — Giotto</li><li>Maestà — Simone Martini</li><li>Anunciación — Simone Martini</li><li>Alegoría del Buen Gobierno — Ambrogio Lorenzetti</li><li>Alegoría del Mal Gobierno — Ambrogio Lorenzetti</li><li>Presentación en el Templo — Ambrogio Lorenzetti</li><li>Políptico de Santa Caterina — Simone Martini</li></ol></div>
+</section>
+
+<section class="movement" id="quattrocento">
+<div class="heading"><h2>Quattrocento</h2><div class="years">Siglo XV · c. 1400–1500</div></div>
+<div class="grid"><div class="feature" style="background-image:url('quatrocento.jpg')"><span>Humanismo, perspectiva y recuperación clásica</span></div>
+<div class="info"><h3>Características</h3><p>El Renacimiento temprano desarrolla la perspectiva lineal, el estudio de la anatomía, el equilibrio compositivo y el interés por la Antigüedad clásica y el humanismo.</p><h3>3 artistas</h3><div class="artists"><span class="artist">Masaccio</span><span class="artist">Botticelli</span><span class="artist">Fra Angelico</span></div></div></div>
+<div class="works"><h3>10 obras importantes</h3><ol><li>La Trinidad — Masaccio</li><li>El tributo de la moneda — Masaccio</li><li>La expulsión del Paraíso — Masaccio</li><li>El nacimiento de Venus — Botticelli</li><li>La Primavera — Botticelli</li><li>La adoración de los Magos — Botticelli</li><li>La Anunciación — Fra Angelico</li><li>La Coronación de la Virgen — Fra Angelico</li><li>Puertas del Paraíso — Lorenzo Ghiberti</li><li>David — Donatello</li></ol></div>
+</section>
+
+<section class="movement" id="cinquecento">
+<div class="heading"><h2>Cinquecento</h2><div class="years">Siglo XVI · c. 1500–1600</div></div>
+<div class="grid"><div class="feature" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Michelangelo_-_Creation_of_Adam.jpg')"><span>Madurez del Renacimiento italiano</span></div>
+<div class="info"><h3>Características</h3><p>Predominan la armonía, monumentalidad, proporción y dominio técnico. Roma se convierte en un gran centro artístico y se consolidan figuras de enorme influencia.</p><h3>3 artistas</h3><div class="artists"><span class="artist">Leonardo da Vinci</span><span class="artist">Miguel Ángel</span><span class="artist">Rafael</span></div></div></div>
+<div class="works"><h3>10 obras importantes</h3><ol><li>La Gioconda — Leonardo da Vinci</li><li>La Última Cena — Leonardo da Vinci</li><li>La Virgen de las Rocas — Leonardo da Vinci</li><li>La creación de Adán — Miguel Ángel</li><li>La Piedad — Miguel Ángel</li><li>David — Miguel Ángel</li><li>La escuela de Atenas — Rafael</li><li>La transfiguración — Rafael</li><li>Madonna Sixtina — Rafael</li><li>Asunción de la Virgen — Tiziano</li></ol></div>
+</section>
+
+<section class="movement" id="renacimiento">
+<div class="heading"><h2>Renacimiento</h2><div class="years">Siglos XV–XVI · c. 1400–1600</div></div>
+<div class="grid"><div class="feature" style="background-image:url('la\ mona.jfif')"><span>Humanismo y búsqueda de armonía</span></div>
+<div class="info"><h3>Características</h3><p>Movimiento cultural europeo que recupera ideales de la Antigüedad clásica y coloca al ser humano, la observación de la naturaleza, la razón y la proporción en un lugar central.</p><h3>3 artistas</h3><div class="artists"><span class="artist">Leonardo da Vinci</span><span class="artist">Miguel Ángel</span><span class="artist">Rafael</span></div></div></div>
+<div class="works"><h3>10 obras importantes</h3><ol><li>La Gioconda — Leonardo da Vinci</li><li>La Última Cena — Leonardo da Vinci</li><li>Hombre de Vitruvio — Leonardo da Vinci</li><li>David — Miguel Ángel</li><li>La Piedad — Miguel Ángel</li><li>La creación de Adán — Miguel Ángel</li><li>La escuela de Atenas — Rafael</li><li>La transfiguración — Rafael</li><li>El nacimiento de Venus — Botticelli</li><li>La Primavera — Botticelli</li></ol></div>
+</section>
+
+<section class="movement" id="manierismo">
+<div class="heading"><h2>Manierismo</h2><div class="years">Siglo XVI · c. 1520–1600</div></div>
+<div class="grid"><div class="feature" style="background-image:url('cuello.jfif')"><span>Elegancia, artificio y formas alargadas</span></div>
+<div class="info"><h3>Características</h3><p>Se aleja del equilibrio clásico del Alto Renacimiento. Destacan las figuras alargadas, composiciones complejas, colores poco naturales, tensión y elegancia deliberadamente artificial.</p><h3>3 artistas</h3><div class="artists"><span class="artist">El Greco</span><span class="artist">Parmigianino</span><span class="artist">Pontormo</span></div></div></div>
+<div class="works"><h3>10 obras importantes</h3><ol><li>Madonna del cuello largo — Parmigianino</li><li>Autorretrato en espejo convexo — Parmigianino</li><li>El descendimiento — Pontormo</li><li>Visitación — Pontormo</li><li>El entierro del Conde de Orgaz — El Greco</li><li>El expolio — El Greco</li><li>La dama del armiño — Parmigianino</li><li>Venus, Cupido y Sátiro — Pontormo</li><li>La última cena — Jacopo Pontormo</li><li>La Trinidad — El Greco</li></ol></div>
+</section>
+
+<section class="movement" id="barroco">
+<div class="heading"><h2>Barroco</h2><div class="years">Siglos XVII–XVIII · c. 1600–1750</div></div>
+<div class="grid"><div class="feature" style="background-image:url('Barroco.jpg')"><span>Drama, movimiento, luz y contraste</span></div>
+<div class="info"><h3>Características</h3><p>Busca impactar al espectador mediante el dramatismo, el movimiento, el contraste de luces y sombras, composiciones dinámicas y una fuerte carga emocional.</p><h3>3 artistas</h3><div class="artists"><span class="artist">Caravaggio</span><span class="artist">Velázquez</span><span class="artist">Rembrandt</span></div></div></div>
+<div class="works"><h3>10 obras importantes</h3><ol><li>La vocación de San Mateo — Caravaggio</li><li>La conversión de San Pablo — Caravaggio</li><li>Las Meninas — Velázquez</li><li>La rendición de Breda — Velázquez</li><li>La fragua de Vulcano — Velázquez</li><li>La ronda de noche — Rembrandt</li><li>La lección de anatomía del Dr. Tulp — Rembrandt</li><li>El rapto de las hijas de Leucipo — Rubens</li><li>Las tres gracias — Rubens</li><li>Éxtasis de Santa Teresa — Bernini</li></ol></div>
+</section>
+
+<section class="movement" id="rococo">
+<div class="heading"><h2>Rococó</h2><div class="years">Siglo XVIII · c. 1700–1780</div></div>
+<div class="grid"><div class="feature" style="background-image:url('colum.jpg')"><span>Ligereza, ornamentación y escenas galantes</span></div>
+<div class="info"><h3>Características</h3><p>Estilo decorativo asociado a ambientes cortesanos. Emplea colores claros, formas curvas, ornamentación abundante y temas elegantes, amorosos, mitológicos y de ocio.</p><h3>3 artistas</h3><div class="artists"><span class="artist">Jean-Honoré Fragonard</span><span class="artist">François Boucher</span><span class="artist">Antoine Watteau</span></div></div></div>
+<div class="works"><h3>10 obras importantes</h3><ol><li>El columpio — Fragonard</li><li>El cerrojo — Fragonard</li><li>La lectura — Fragonard</li><li>Diana saliendo del baño — Boucher</li><li>El triunfo de Venus — Boucher</li><li>Madame de Pompadour — Boucher</li><li>Embarque para Citerea — Watteau</li><li>Gilles — Watteau</li><li>La enseña de Gersaint — Watteau</li><li>El desayuno — Boucher</li></ol></div>
+</section>
+
+</main>
+<footer>
+Trabajo de Historia del Arte II · Contenido 1 · V Bachillerato en Diseño Gráfico<br>
+Carlos Manuel Pereira Vásquez VB clave:18
+</footer>
+</body>
+</html>
